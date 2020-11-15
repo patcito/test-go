@@ -22,6 +22,11 @@ jobs:
       uses: patcito/github-action-publish-binaries@master
       env:
         POST_URL: https://5c745a681cb8.ngrok.io
+        REPO: $REPO
+        PR: $PR
+        RUN_ID: $RUN_ID
+        BRANCH: $BRANCH
+        REF: $REF
       with:
         args: '*.go'
 
