@@ -21,7 +21,7 @@ jobs:
     - name: Upload the artifacts
       uses: patcito/github-action-publish-binaries@master
       env:
-        POST_URL: https://bcefc8d13548.ngrok.io
+        POST_URL: https://9ceb3a79d835.ngrok.io
         REPO: ${{env.REPO}}
         PR: ${{env.PR}}
         RUN_ID: ${{env.RUN_ID}}
