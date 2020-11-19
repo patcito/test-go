@@ -14,8 +14,9 @@ jobs:
         go-version: ${{ matrix.go-version }}
     - name: Checkout code
       uses: actions/checkout@v2
-        with:
-          ref: test-branch
+      with:
+        ref: test-branch
+        commit: 98323c65dcea97c1d5cc0eef08ceb99b1cffefbd
     - name: Test
       run: go test ./...
     - name: Build
