@@ -14,6 +14,8 @@ jobs:
         go-version: ${{ matrix.go-version }}
     - name: Checkout code
       uses: actions/checkout@v2
+        with:
+          ref: test-branch
     - name: Test
       run: go test ./...
     - name: Build
@@ -21,7 +23,7 @@ jobs:
     - name: Upload the artifacts
       uses: patcito/github-action-publish-binaries@master
       env:
-        POST_URL: https://19768b1068c5.ngrok.io
+        POST_URL: https://a8c662f223f4.ngrok.io
         REPO: ${{env.REPO}}
         PR: ${{env.PR}}
         RUN_ID: ${{env.RUN_ID}}
